@@ -26,6 +26,10 @@ public class Producto {
 
     private boolean estado;
 
+    @ManyToOne
+    @JoinColumn(name = "id_categoria", insertable = false, updatable = false)
+    private Categorias categoria;
+
     public Integer getIdProducto() {
         return IdProducto;
     }
